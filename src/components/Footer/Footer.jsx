@@ -103,7 +103,7 @@ const useStyles = createStyles((theme) => ({
   newsletterInput: {
     width: `450px`,
     [theme.fn.smallerThan('sm')]: {
-      width: `100%`
+      width: `100%` 
     },
   },
 
