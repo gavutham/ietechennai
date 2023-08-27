@@ -1,5 +1,5 @@
 const footerGroups = [
-    "Useful Items",
+    "Useful Links",
   ];
   
   export default footerGroups;

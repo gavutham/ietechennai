@@ -1,5 +1,7 @@
-import { createStyles, Text, Container, ActionIcon, Group, rem } from '@mantine/core';
-import { IconBrandLinkedin, IconBrandInstagram } from '@tabler/icons-react';
+import { createStyles, Text, ActionIcon, Group, rem, TextInput, useMantineTheme  } from '@mantine/core';
+import {AiOutlineArrowRight} from "react-icons/ai";
+import {BiLogoLinkedin} from "react-icons/bi";
+import {BsInstagram} from "react-icons/bs"
 import footerGroups from '../../utils/footerGroups';
 import footerUsefulLinksItems from '../../utils/footerUsefulLinksItems';
 import { useNavigate } from "react-router-dom";
@@ -10,8 +12,7 @@ const useStyles = createStyles((theme) => ({
   footer: {
     position: "relative",
     bottom: 0,
-    paddingTop: `calc(${theme.spacing.xl} * 2)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    padding: `calc(${theme.spacing.xl} * 2) 8%`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
@@ -30,6 +31,8 @@ const useStyles = createStyles((theme) => ({
 
   description: {
     marginTop: rem(5),
+    marginBottom: rem(20),
+    lineHeight: rem(28),
 
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
@@ -76,9 +79,33 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.lg,
     fontWeight: 700,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    marginBottom: `calc(${theme.spacing.xs} / 2)`,
+    marginBottom: `1.5rem`,
+    marginTop: `1rem`,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    [theme.fn.smallerThan('sm')]: {
+      marginTop: theme.spacing.xs,
+      textAlign: 'center',
+    },
   },
+
+  newsletter: {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    width: `650px`,
+    [theme.fn.smallerThan('sm')]: {
+      width: `100%`
+    },
+  },
+
+  
+  newsletterInput: {
+    width: `450px`,
+    [theme.fn.smallerThan('sm')]: {
+      width: `100%`
+    },
+  },
+
 
   afterFooter: {
     display: 'flex',
@@ -108,6 +135,7 @@ const useStyles = createStyles((theme) => ({
 const Footer = () => {
   const { classes } = useStyles();
   const navigate = useNavigate(); 
+  const theme = useMantineTheme();
 
   const groups = footerGroups.map(() => {
     const links = footerUsefulLinksItems.map((link, index) => (
@@ -135,17 +163,17 @@ const Footer = () => {
   return (
     <>
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <div className={classes.inner}>
         <div className={classes.logo}>
-          <Text className="logoName">IETE Chennai</Text>
-          <Text size="xs" color="dimmed" className={classes.description}>
+          <Text className={classes.title} id="title">IETE Chennai</Text>
+          <Text size="sm" color="dimmed" className={classes.description}>
             Phone: 044 2835 0773<br/>
             Email: ietechennai@gmail.com
           </Text>
         </div>
         <div className="address">
           <Text className={classes.title}>Address</Text>
-          <Text size="xs" color="dimmed" className={classes.description}>
+          <Text size="sm" color="dimmed" className={classes.description}>
           IETE Chennai centre,<br/>
           No: 37, Tamil Nadu 600086<br/>
           Conran Smith Road Entrance Peters Road,<br/>
@@ -153,8 +181,27 @@ const Footer = () => {
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
-      </Container>
-      <Container className={classes.afterFooter}>
+      </div>
+      <div className={classes.newsletter}>
+        <Text className={classes.title} id="newsletterTitle">Join our Newsletter</Text>
+        <TextInput
+        className={classes.newsletterInput}
+        radius="xl"
+        size="sm"
+        rightSection={
+          <ActionIcon size={32} radius="xl" color={theme.primaryColor} variant="filled">
+            {theme.dir === 'ltr' ? (
+              <AiOutlineArrowRight/>
+            ) : (
+              <AiOutlineArrowRight size="1.1rem" stroke={1.5} />
+            )}
+          </ActionIcon>
+        }
+        placeholder="Enter your email"
+        rightSectionWidth={42}
+        />
+      </div>
+      <div className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
           © Copyright IETE Chennai. All rights reserved.
         </Text>
@@ -162,13 +209,13 @@ const Footer = () => {
         <Group spacing={0} className={classes.social} position="right" noWrap>
 
           <ActionIcon size="lg">
-            <IconBrandInstagram size="1.05rem" stroke={1.5} onClick={() => window.location.replace("https://www.instagram.com/iete_chennai/")}/>
+            <BsInstagram onClick={() => window.open("https://www.instagram.com/iete_chennai/", "_blank")}/>
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandLinkedin size="1.05rem" stroke={1.5} />
+            <BiLogoLinkedin size="1.05rem" stroke={1.5} />
           </ActionIcon>
         </Group>
-      </Container>
+      </div>
     </footer>
     </>
   );

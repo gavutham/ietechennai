@@ -11,6 +11,18 @@ const footerUsefulLinksItems = [
       link: "/contact",
       label: "Contact",
     },
+    {
+      link: "/comittee",
+      label: "Comittee",
+    },
+    {
+      link: "/",
+      label: "Events",
+    },
+    {
+      link: "/",
+      label: "Membership",
+    },
   ];
   
   export default footerUsefulLinksItems;
