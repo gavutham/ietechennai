@@ -93,6 +93,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: "column",
     flexWrap: "wrap",
     width: `650px`,
+    marginBottom: rem(40),
     [theme.fn.smallerThan('sm')]: {
       width: `100%`
     },
