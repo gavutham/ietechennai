@@ -18,6 +18,7 @@ import "./Footer.scss";
 const useStyles = createStyles((theme) => ({
   footer: {
     position: "relative",
+    height: `calc(100vh - 75px - (${theme.spacing.xl} * 4))`,
     bottom: 0,
     padding: `calc(${theme.spacing.xl} * 2) 8%`,
     backgroundColor:
@@ -53,6 +54,7 @@ const useStyles = createStyles((theme) => ({
   inner: {
     display: "flex",
     justifyContent: "space-between",
+    marginBottom: "24px",
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
@@ -113,6 +115,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   newsletterInput: {
+    marginTop: "24px",
     width: `450px`,
     [theme.fn.smallerThan("sm")]: {
       width: `100%`,
@@ -123,7 +126,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: theme.spacing.xl,
+    marginTop: "auto",
     paddingTop: theme.spacing.xl,
     paddingBottom: theme.spacing.xl,
     borderTop: `${rem(1)} solid ${
@@ -146,6 +149,10 @@ const Footer = () => {
   const { classes } = useStyles();
   const navigate = useNavigate();
   const theme = useMantineTheme();
+
+  const openEmail = () => {
+    window.location.href = "mailto:ietechennai@gmail.com";
+  };
 
   const groups = footerGroups.map(() => {
     const links = footerUsefulLinksItems.map((link, index) => (
@@ -175,16 +182,20 @@ const Footer = () => {
 
   return (
     <>
-      <footer className={classes.footer}>
+      <footer className={`footer ${classes.footer}`}>
         <div className={classes.inner}>
           <div className={classes.logo}>
             <Text className={classes.title} id="title">
               IETE Chennai
             </Text>
-            <Text size="sm" color="dimmed" className={classes.description}>
+            <Text
+              size="sm"
+              color="dimmed"
+              className={`description ${classes.description}`}
+            >
               Phone: 044 2835 0773
               <br />
-              Email: ietechennai@gmail.com
+              <span onClick={openEmail}>Email: ietechennai@gmail.com</span>
             </Text>
           </div>
           <div className="address">
