@@ -8,6 +8,10 @@ const navbarItems = [
     label: "About",
   },
   {
+    link: "/membership",
+    label: "Membership",
+  },
+  {
     link: "/contact",
     label: "Contact",
   },

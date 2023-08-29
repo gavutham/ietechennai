@@ -1,0 +1,28 @@
+img {
+  max-width: 500px;
+  border-radius: 69% 31% 61% 39% / 36% 63% 37% 64%;
+}
+
+#whyJoinUs {
+  display: flex;
+  align-items: center;
+  gap: 8%;
+  background-color: rgb(226, 228, 243);
+}
+
+#membershipTitle {
+  margin-top: 5rem;
+  font-weight: bolder;
+}
+
+.button {
+  color: black;
+  background-color: transparent;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.formContainer{
+    padding: 40px 5%;
+    padding-bottom: 60px;
+}

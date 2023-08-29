@@ -5,6 +5,7 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/Not Found/NotFound";
 import Layout from "./components/Layout/Layout";
 import Team from "./pages/Team/Team";
+import Membership from "./pages/Membership/Membership";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/membership",
+        element: <Membership />,
       },
       {
         path: "/contact",
