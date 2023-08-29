@@ -26,7 +26,7 @@ const EventCard = ({ event }) => {
       >
         <EventModal event={event} date={date} />
       </Modal>
-      <img src={event.img} alt="Norway" onClick={open} />
+      <img src={event.img} alt="event-banner" onClick={open} />
 
       <div className="content" onClick={open}>
         <Text weight={500}>{event.name}</Text>

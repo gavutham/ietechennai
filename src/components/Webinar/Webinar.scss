@@ -1,0 +1,81 @@
+@import "../../utils/constants.scss";
+
+.webinar {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .top {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .left {
+      flex: 1;
+
+      .eventTitle {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 26px;
+      }
+
+      .date {
+        font-size: 20px;
+        font-weight: 700;
+        color: gray;
+        margin-bottom: 32px;
+      }
+
+      .by {
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+
+      img {
+        width: 70%;
+        border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+        animation: floating 3s ease-in-out infinite;
+        box-shadow: $shadow1;
+        -webkit-box-shadow: $shadow1;
+        -moz-box-shadow: $shadow1;
+
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    .info {
+      font-size: 22px;
+      margin-right: 32px;
+      max-width: 60%;
+      display: inline-block;
+      margin-bottom: 36px;
+    }
+
+    .note {
+      font-size: 20px;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -8,12 +8,16 @@ const navbarItems = [
     label: "About",
   },
   {
-    link: "/contact",
-    label: "Contact",
+    link: "/events",
+    label: "Events",
   },
   {
     link: "/team",
     label: "Committee",
+  },
+  {
+    link: "/contact",
+    label: "Contact",
   },
 ];
 

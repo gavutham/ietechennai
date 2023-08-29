@@ -10,8 +10,8 @@ import EventCard from "../../components/EventCard/EventCard";
 const Home = () => {
   const navigate = useNavigate();
 
-  const reqEvents = events.slice(-4, events.length);
-  reqEvents.reverse();
+  events.sort((a, b) => b.date.getTime() - a.date.getTime());
+  const reqEvents = events.slice(0, 4);
 
   return (
     <div>

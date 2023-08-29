@@ -1,1 +1,15 @@
 $themeBlue: #010066;
+
+$shadow1: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}

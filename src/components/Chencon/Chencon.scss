@@ -1,0 +1,83 @@
+@import "../../utils/constants.scss";
+
+.chencon {
+  background-color: rgb(226, 228, 243);
+  padding: 100px 50px 50px;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .top {
+    display: flex;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .left {
+      flex: 1;
+      img {
+        width: 80%;
+        border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
+        animation: floating 3s ease-in-out infinite;
+        box-shadow: $shadow1;
+        -webkit-box-shadow: $shadow1;
+        -moz-box-shadow: $shadow1;
+
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      text-align: right;
+
+      .eventTitle {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+
+      .date {
+        font-size: 20px;
+        font-weight: 700;
+        color: gray;
+        margin-bottom: 32px;
+      }
+
+      .desc {
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 20px;
+    .note {
+      font-size: 20px;
+      margin-right: 32px;
+      margin-bottom: 36px;
+
+      span {
+        font-weight: 700;
+      }
+
+      Button {
+        margin-left: 16px;
+        background-color: transparent;
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+}
