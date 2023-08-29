@@ -16,6 +16,10 @@ const navbarItems = [
     label: "Committee",
   },
   {
+    link: "/chencon",
+    label: "Chencon",
+  },
+  {
     link: "/contact",
     label: "Contact",
   },

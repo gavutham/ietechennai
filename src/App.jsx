@@ -6,6 +6,7 @@ import NotFound from "./pages/Not Found/NotFound";
 import Layout from "./components/Layout/Layout";
 import Team from "./pages/Team/Team";
 import Events from "./pages/Events/Events";
+import Chencon from "./pages/Chencon/Chencon";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/team",
         element: <Team />,
+      },
+      {
+        path: "/chencon",
+        element: <Chencon />,
       },
       {
         path: "/contact",
