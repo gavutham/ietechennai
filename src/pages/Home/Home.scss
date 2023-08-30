@@ -74,8 +74,11 @@
 
     img {
       max-width: 500px;
-
+      box-shadow: $shadow1;
+      -webkit-box-shadow: $shadow1;
+      -moz-box-shadow: $shadow1;
       border-radius: 69% 31% 61% 39% / 36% 63% 37% 64%;
+      animation: floating 2s ease infinite;
     }
 
     .contents {
@@ -127,10 +130,36 @@
 
     .eventList {
       max-height: 80%;
-      display: flex;
-      justify-content: space-between;
-      gap: 36px;
-      flex-wrap: wrap;
+      padding: 20px 100px;
+
+      .eventCard {
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        transition: all 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+        }
+
+        img {
+          flex: 1;
+          object-fit: cover;
+          width: 180px;
+        }
+
+        .content {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
     }
   }
 }

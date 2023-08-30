@@ -6,12 +6,16 @@ import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { useNavigate } from "react-router";
 import events from "../../utils/events";
 import EventCard from "../../components/EventCard/EventCard";
+import { Carousel } from "@mantine/carousel";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const Home = () => {
   const navigate = useNavigate();
 
   events.sort((a, b) => b.date.getTime() - a.date.getTime());
   const reqEvents = events.slice(0, 4);
+  const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
     <div>
@@ -71,9 +75,33 @@ const Home = () => {
           </div>
 
           <div className="eventList">
-            {reqEvents.map((e) => (
-              <EventCard key={e.name} event={e} />
-            ))}
+            <Carousel
+              maw="100%"
+              plugins={[autoplay.current]}
+              onMouseEnter={autoplay.current.stop}
+              onMouseLeave={autoplay.current.reset}
+              loop
+              dragFree
+              withIndicators
+              styles={{
+                control: {
+                  "&[data-inactive]": {
+                    opacity: 0,
+                    cursor: "default",
+                  },
+                },
+                indicator: {
+                  backgroundColor: "gray",
+                  transition: "width 250ms ease",
+                },
+              }}
+            >
+              {reqEvents.map((e) => (
+                <Carousel.Slide key={e.name}>
+                  <EventCard event={e} />
+                </Carousel.Slide>
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>

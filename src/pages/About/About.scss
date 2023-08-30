@@ -12,6 +12,7 @@
 
     img {
       border-radius: 30% 70% 70% 30% / 52% 30% 70% 48%;
+      box-shadow: $shadow1;
       height: 330px;
       animation: floating 3s ease-in-out infinite;
     }

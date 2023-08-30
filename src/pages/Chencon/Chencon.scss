@@ -227,10 +227,10 @@
       div {
         display: flex;
         flex-direction: row;
-
         gap: 10px;
         align-items: center;
-        width: 400px;
+        width: max-content;
+        margin-bottom: 10px;
 
         .title {
           font-size: 18px;
@@ -241,6 +241,7 @@
         .desc {
           font-size: 18px;
           font-weight: bold;
+          margin-bottom: 0;
         }
 
         .link {

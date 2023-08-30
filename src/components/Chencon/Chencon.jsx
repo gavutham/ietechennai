@@ -10,9 +10,6 @@ const Chencon = () => {
     <div className="chencon">
       <div className="top">
         <div className="left">
-          <img src="/chencon/chencon22.jpeg" alt="chenon-img" />
-        </div>
-        <div className="right">
           <Text className="eventTitle">
             IETE CHENCON 2022 - Call for Papers
           </Text>
@@ -21,6 +18,9 @@ const Chencon = () => {
             International Conference on Power of Artificial Intelligence and
             Machine Learning for Human Empowerment
           </Text>
+        </div>
+        <div className="right">
+          <img src="/chencon/chencon22.jpeg" alt="chenon-img" />
         </div>
       </div>
       <div className="bottom">

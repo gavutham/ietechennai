@@ -1,26 +1,24 @@
 @import "../../utils/constants.scss";
 
 .webinar {
-  padding: 50px;
+  padding: 50px 50px 100px;
   display: flex;
   flex-direction: column;
 
   .title {
     font-size: 36px;
     font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .top {
     display: flex;
-    gap: 50px;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     margin-bottom: 50px;
 
     .left {
-      flex: 1;
+      flex: 4;
 
       .eventTitle {
         font-size: 32px;
@@ -36,13 +34,19 @@
       }
 
       .by {
-        font-size: 24px;
-        font-weight: 300;
+        font-size: 22px;
+      }
+
+      .info {
+        font-size: 22px;
+        margin-right: 32px;
+        display: inline-block;
+        margin-top: 36px;
       }
     }
 
     .right {
-      flex: 1;
+      flex: 3;
       display: flex;
       justify-content: center;
       align-items: start;
@@ -63,16 +67,8 @@
   }
 
   .bottom {
-    .info {
-      font-size: 22px;
-      margin-right: 32px;
-      max-width: 60%;
-      display: inline-block;
-      margin-bottom: 36px;
-    }
-
     .note {
-      font-size: 20px;
+      font-size: 22px;
       span {
         font-weight: 700;
       }

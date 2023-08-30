@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Card, Group, Image, Text } from "@mantine/core";
+import { Card, Group, Text } from "@mantine/core";
 import "./MemberCard.scss";
 import { GoMail } from "react-icons/go";
 
@@ -16,9 +16,7 @@ const MemberCard = ({ member }) => {
       withBorder
       className="memberCard"
     >
-      <Card.Section>
-        <Image src={member.img} height={300} alt="profile-img" />
-      </Card.Section>
+      <img className="image" src={member.img} alt="profile-img" />
 
       <Group position="apart" mt="md" mb="xs">
         <Text size="lg" weight={400}>
