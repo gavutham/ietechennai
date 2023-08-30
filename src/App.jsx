@@ -7,6 +7,7 @@ import Layout from "./components/Layout/Layout";
 import Team from "./pages/Team/Team";
 import Events from "./pages/Events/Events";
 import Chencon from "./pages/Chencon/Chencon";
+import Archive from "./pages/Archive/Archive";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/chencon",
         element: <Chencon />,
+      },
+      {
+        path: "/archive",
+        element: <Archive />,
       },
       {
         path: "/contact",

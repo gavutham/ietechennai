@@ -20,6 +20,10 @@ const navbarItems = [
     label: "Chencon",
   },
   {
+    link: "/archive",
+    label: "Archive",
+  },
+  {
     link: "/contact",
     label: "Contact",
   },
