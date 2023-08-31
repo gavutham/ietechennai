@@ -6,7 +6,7 @@
     max-height: max-content;
     display: flex;
     align-items: center;
-    gap: 250px;
+    justify-content: space-around;
 
     .logo {
       border-radius: 50%;
@@ -18,11 +18,27 @@
     }
 
     .motto {
-      margin-left: 200px;
       font-size: 50px;
       color: rgb(196, 196, 196);
       max-width: 500px;
       font-weight: 900;
+    }
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+      min-height: calc((100vh - 75px) * 0.6);
+      padding: 60px 0;
+
+      .logo {
+        width: 35%;
+        height: 35%;
+      }
+
+      .motto {
+        font-size: 38px;
+        text-align: center;
+      }
     }
   }
 
@@ -61,6 +77,30 @@
         font-size: 16px;
       }
     }
+
+    @include mobile {
+      flex-direction: column;
+      padding: 50px;
+      min-height: max-content;
+      gap: 30px;
+
+      img {
+        width: 70%;
+      }
+
+      .quoteContent {
+        gap: 30px;
+        .quoteText {
+          font-size: 30px;
+          word-spacing: inherit;
+          text-align: justify;
+        }
+
+        s .author {
+          font-size: 14px;
+        }
+      }
+    }
   }
 
   .about {
@@ -97,6 +137,23 @@
         background-color: transparent;
         padding: 0;
         text-decoration: underline;
+      }
+    }
+
+    @include mobile {
+      min-height: max-content;
+      flex-direction: column-reverse;
+      padding: 50px 20px;
+      justify-content: start;
+
+      img {
+        display: none;
+      }
+
+      .contents {
+        .desc {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -159,6 +216,26 @@
           flex-direction: column;
           gap: 5px;
         }
+      }
+    }
+
+    @include mobile {
+      padding: 30px 20px 50px;
+      min-height: max-content;
+
+      .heading {
+        justify-content: space-between;
+        Button {
+          margin-left: 10px;
+        }
+
+        .title {
+          font-size: 36px;
+        }
+      }
+
+      .eventList {
+        padding: 20px;
       }
     }
   }

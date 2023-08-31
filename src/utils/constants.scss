@@ -14,3 +14,21 @@ $shadow2: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
     transform: translate(0, -0px);
   }
 }
+
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 768) and (max-width: 1200px) {
+    @content;
+  }
+}
