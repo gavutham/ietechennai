@@ -6,7 +6,7 @@ import "./Team.scss";
 const Team = () => {
   return (
     <Flex className="team">
-      <Text className="title">Meet out Committee</Text>
+      <Text className="title">Meet our Executive Committee</Text>
       <div className="container">
         {team.map((mem) => (
           <MemberCard key={mem.email} member={mem} />

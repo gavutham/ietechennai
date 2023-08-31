@@ -14,6 +14,12 @@ const Chencon = () => {
             IETE CHENCON 2022 - Call for Papers
           </Text>
           <Text className="date">Hybrid Mode- MAY 20 & 21, 2022</Text>
+
+          <img
+            src="/chencon/chencon22.jpeg"
+            alt="chenon-img"
+            className="mobileImg"
+          />
           <Text className="desc">
             International Conference on Power of Artificial Intelligence and
             Machine Learning for Human Empowerment

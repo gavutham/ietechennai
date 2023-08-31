@@ -29,5 +29,7 @@
 
   @include mobile {
     flex-direction: column;
+
+    width: 100%;
   }
 }

@@ -7,6 +7,10 @@
   max-height: max-content;
   flex-direction: column;
 
+  .mobileImg {
+    display: none;
+  }
+
   .title {
     font-size: 36px;
     font-weight: 500;
@@ -77,6 +81,54 @@
         background-color: transparent;
         color: black;
         text-decoration: underline;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    .top {
+      .left {
+        .eventTitle {
+          margin-bottom: 20px;
+        }
+
+        .mobileImg {
+          margin: auto;
+          margin-bottom: 30px;
+          display: block;
+          width: 80%;
+          height: auto;
+          border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+          animation: floating 3s ease-in-out infinite;
+          box-shadow: $shadow1;
+          -webkit-box-shadow: $shadow1;
+          -moz-box-shadow: $shadow1;
+        }
+
+        .desc {
+          margin-bottom: 20px;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+
+    .bottom {
+      max-width: none;
+
+      .note {
+        margin-right: 0;
+
+        span {
+          margin-right: 10px;
+        }
+
+        Button {
+          margin-left: 0;
+        }
       }
     }
   }

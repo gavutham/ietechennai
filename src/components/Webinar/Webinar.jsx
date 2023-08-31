@@ -9,6 +9,8 @@ const Webinar = () => {
         <div className="left">
           <Text className="eventTitle">Webinar on IoT Security(WISE-2022)</Text>
           <Text className="date">on 30th May, 2022</Text>
+
+          <img src="/event/iotsec.jpg" alt="event-img" className="mobileImg" />
           <Text className="by">
             SETS Chennai & C-DAC Hyderabad in collaboration with ISEA
           </Text>
