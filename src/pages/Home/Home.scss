@@ -151,8 +151,12 @@
       }
 
       .contents {
+        .heading {
+          text-align: center;
+        }
         .desc {
           font-size: 18px;
+          text-align: justify;
         }
       }
     }
