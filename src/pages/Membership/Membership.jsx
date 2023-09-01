@@ -1,4 +1,4 @@
-import { Button, createStyles, Text, rem } from "@mantine/core";
+import { Button, createStyles, Text, rem, Grid } from "@mantine/core";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { members, links } from "../../utils/membership";
 import MembershipCard from "../../components/MembershipCard/MembershipCard";
@@ -77,27 +77,14 @@ const useStyles = createStyles((theme) => ({
 
   forms: {
     display: "flex",
-    flexWrap: "wrap",
     justifyContent: "space-around",
-    gap: rem(5),
+    gap: rem(15),
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
+      gap: rem(3)
     },
   },
 
-  formButton: {
-    width: `calc((100% - 100px) / 5)`,
-    height: `40px`,
-    color: `#333333`,
-    marginBottom: `16px`,
-    fontSize: `18px`,
-    border: `1px solid lightgrey`,
-    borderRadius: `5px`,
-    boxShadow: `0px 0px 20px -13px rgba(0, 0, 0, 0.75)`,
-    [theme.fn.smallerThan("sm")]: {
-      width: `100%`,
-    },
-  },
 }));
 
 const Membership = () => {
@@ -155,18 +142,20 @@ const Membership = () => {
       <div className="formContainer">
         <div className={classes.formContainer}>
           <Text className={classes.subtitle}>Application Forms</Text>
-          <div className={classes.forms}>
+          <Grid className={classes.forms} grow>
             {links.map((e) => (
-              <Button
-                variant="white"
-                className={classes.formButton}
+              <Grid.Col 
+              md={3}
+              lg={1}
+              sm={3}
+                className="formButton"
                 key={e}
                 onClick={() => window.open(e.link, "_blank")}
               >
                 {e.label}
-              </Button>
+              </Grid.Col>
             ))}
-          </div>
+          </Grid>
         </div>
       </div>
     </>
