@@ -101,9 +101,24 @@
           -webkit-box-shadow: $shadow1;
           -moz-box-shadow: $shadow1;
         }
+
+        .by {
+          font-size: 20px;
+        }
+
+        .info {
+          font-size: 20px;
+        }
       }
+
       .right {
         display: none;
+      }
+    }
+
+    .bottom {
+      .note {
+        font-size: 20px;
       }
     }
   }

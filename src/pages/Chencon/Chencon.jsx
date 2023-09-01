@@ -12,6 +12,12 @@ const Chencon = () => {
           <div className="left">
             <Text className="title">IETE CHENCON 2022 - Call for Papers</Text>
             <Text className="date">Hybrid Mode- MAY 20 & 21, 2022</Text>
+
+            <img
+              src="/chencon/chencon22.jpeg"
+              alt="chencon-img"
+              className="mobileImg"
+            />
             <Text className="desc">
               International Conference on Power of Artificial Intelligence and
               Machine Learning for Human Empowerment
@@ -108,13 +114,16 @@ const Chencon = () => {
           </div>
           <div className="list">
             <Text>
-              IETE members including ISF : <span>Rs. 1500 + GST</span>
+              IETE members including ISF : <br />
+              <span>Rs. 1500 + GST</span>
             </Text>
             <Text>
-              NON IETE participants : <span>Rs. 2000 + GST</span>
+              NON IETE participants : <br />
+              <span>Rs. 2000 + GST</span>
             </Text>
             <Text>
-              International Participants : <span>$50</span>
+              International Participants : <br />
+              <span>$50</span>
             </Text>
           </div>
         </div>
@@ -122,16 +131,20 @@ const Chencon = () => {
           <div className="title">Important Dates</div>
           <div className="list">
             <Text>
-              Last date for paper Submission : <span>06.05.2022</span>
+              Last date for paper Submission : <br />
+              <span>06.05.2022</span>
             </Text>
             <Text>
-              Notification of Acceptance : <span>10.05.2022</span>
+              Notification of Acceptance : <br />
+              <span>10.05.2022</span>
             </Text>
             <Text>
-              Registration on or before : <span>15.05.2022</span>
+              Registration on or before : <br />
+              <span>15.05.2022</span>
             </Text>
             <Text>
-              Conference Date : <span>20.05.2022 & 21.05.2022</span>
+              Conference Date : <br />
+              <span>20.05.2022 & 21.05.2022</span>
             </Text>
           </div>
         </div>

@@ -19,6 +19,10 @@
           margin-bottom: 40px;
         }
 
+        .mobileImg {
+          display: none;
+        }
+
         .date {
           font-size: 20px;
           font-weight: 700;
@@ -68,6 +72,52 @@
         }
       }
     }
+
+    @include mobile {
+      min-height: max-content;
+      max-height: max-content;
+      padding: 50px 20px;
+      .top {
+        .left {
+          .title {
+            font-size: 34px;
+          }
+          .mobileImg {
+            display: block;
+            height: auto;
+            max-width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+            border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
+            box-shadow: $shadow1;
+            animation: floating 3s ease-in-out infinite;
+          }
+          .desc {
+            font-size: 20px;
+          }
+        }
+
+        .right {
+          display: none;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        .link {
+          background-color: transparent;
+          color: rgb(20, 20, 20);
+          text-decoration: underline;
+
+          &:hover {
+            color: $themeBlue;
+          }
+        }
+      }
+    }
   }
 
   .second {
@@ -86,6 +136,14 @@
       line-height: 32px;
       text-align: justify;
       margin-bottom: 36px;
+    }
+
+    @include mobile {
+      padding: 50px 20px;
+
+      .title {
+        text-align: center;
+      }
     }
   }
 
@@ -120,6 +178,13 @@
         font-weight: 700;
       }
     }
+
+    @include mobile {
+      padding: 50px 20px;
+      .title {
+        text-align: center;
+      }
+    }
   }
 
   .fourth {
@@ -147,6 +212,27 @@
       gap: 24px;
       span {
         font-weight: 700;
+      }
+      br {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      padding: 50px 20px;
+
+      .title {
+        text-align: center;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        br {
+          display: block;
+        }
       }
     }
   }
@@ -209,6 +295,32 @@
         }
       }
     }
+
+    @include mobile {
+      padding: 50px 20px;
+      gap: 20px;
+
+      .title {
+        text-align: center;
+      }
+
+      hr {
+        width: 50%;
+      }
+
+      .cheif {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .others {
+        div {
+          .name {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
   .contact {
@@ -254,6 +366,20 @@
         }
       }
     }
+
+    @include mobile {
+      padding: 50px 20px;
+
+      .title {
+        // text-align: center;
+      }
+
+      div {
+        flex-direction: column;
+        // align-self: center;
+        gap: 10px;
+      }
+    }
   }
 
   .chencon1 {
@@ -270,6 +396,14 @@
       a {
         text-decoration: underline;
         cursor: pointer;
+      }
+    }
+
+    @include mobile {
+      padding: 50px 20px;
+
+      .desc {
+        font-size: 20px;
       }
     }
   }
