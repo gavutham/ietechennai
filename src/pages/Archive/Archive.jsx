@@ -2,12 +2,20 @@ import { List, Text } from "@mantine/core";
 import "./Archive.scss";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { GrDocumentText } from "react-icons/gr";
+import { motion } from "framer-motion";
+import { textVariant2 } from "../../utils/motion";
 
 const Archive = () => {
   return (
     <div className="archive">
       <Text className="title">Archive</Text>
-      <div className="newsletter">
+      <motion.div
+        className="newsletter"
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <Text className="title">Chenlink Newsletter</Text>
         <Text className="desc">Download the previous newsletters below</Text>
         <List
@@ -32,8 +40,14 @@ const Archive = () => {
             </a>
           </List.Item>
         </List>
-      </div>
-      <div className="chencon">
+      </motion.div>
+      <motion.div
+        className="chencon"
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <Text className="title">Chencon</Text>
         <div className="chencon22">
           <Text className="desc">
@@ -62,7 +76,13 @@ const Archive = () => {
             </List.Item>
           </List>
         </div>
-        <div className="chencon21">
+        <motion.div
+          className="chencon21"
+          variants={textVariant2}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+        >
           <Text className="desc">
             Download the documents of Chencon 2021 below
           </Text>
@@ -78,8 +98,8 @@ const Archive = () => {
               </a>
             </List.Item>
           </List>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
