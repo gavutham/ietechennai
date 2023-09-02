@@ -30,6 +30,12 @@ const useStyles = createStyles((theme) => ({
     borderTop: `${rem(1)} solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
+    [theme.fn.smallerThan("md")]: {
+      paddingTop: `68px`
+    },
+    [theme.fn.smallerThan("sm")]: {
+      padding: `calc(${theme.spacing.xl} * 2) 8%`,
+    },
   },
 
   logo: {
@@ -103,6 +109,29 @@ const useStyles = createStyles((theme) => ({
       marginTop: theme.spacing.xs,
       textAlign: "center",
     },
+    [theme.fn.smallerThan("md")]: {
+      marginBottom: `1rem`,
+    },
+  },
+
+  tabletAddress: {
+    display: "none",
+    marginTop: `40px`,
+    [theme.fn.smallerThan("md")]: {
+      display: "block",
+    },
+    [theme.fn.smallerThan("sm")]: {
+      display: "none"
+    },
+  },
+
+  address: {
+    [theme.fn.smallerThan("md")]: {
+      display: "none",
+    },
+    [theme.fn.smallerThan("sm")]: {
+      display: "block"
+    },
   },
 
   newsletter: {
@@ -111,7 +140,7 @@ const useStyles = createStyles((theme) => ({
     flexWrap: "wrap",
     width: `650px`,
     marginBottom: rem(40),
-    [theme.fn.smallerThan("sm")]: {
+    [theme.fn.smallerThan("md")]: {
       width: `100%`,
     },
   },
@@ -119,7 +148,7 @@ const useStyles = createStyles((theme) => ({
   newsletterInput: {
     marginTop: "24px",
     width: `450px`,
-    [theme.fn.smallerThan("sm")]: {
+    [theme.fn.smallerThan("md")]: {
       width: `100%`,
     },
   },
@@ -205,8 +234,20 @@ const Footer = () => {
               <br />
               <span onClick={openEmail}>Email: ietechennai@gmail.com</span>
             </Text>
+            <div className={classes.tabletAddress}>
+            <Text className={classes.title}>Address</Text>
+            <Text size="sm" color="dimmed" className={classes.description}>
+              IETE Chennai centre,
+              <br />
+              No: 37, Tamil Nadu 600086
+              <br />
+              Conran Smith Road Entrance Peters Road,
+              <br />
+              Gopalapuram,Chennai
+            </Text>
           </div>
-          <div className="address">
+          </div>
+          <div className={classes.address}>
             <Text className={classes.title}>Address</Text>
             <Text size="sm" color="dimmed" className={classes.description}>
               IETE Chennai centre,
