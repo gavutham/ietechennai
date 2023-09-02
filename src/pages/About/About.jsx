@@ -13,7 +13,6 @@ import { BiBuilding } from "react-icons/bi";
 import { motion } from "framer-motion";
 import {
   fadeIn,
-  slideIn,
   staggerContainer,
   textVariant,
   textVariant2,

@@ -2,12 +2,20 @@ import { Button, Text } from "@mantine/core";
 import "./Chencon.scss";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 
 const Chencon = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="chencon">
+    <motion.div
+      className="chencon"
+      variants={fadeIn("right", "tween", 0.1, 1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
       <div className="top">
         <div className="left">
           <Text className="eventTitle">
@@ -43,7 +51,7 @@ const Chencon = () => {
           </Button>
         </Text>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

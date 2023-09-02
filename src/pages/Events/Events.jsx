@@ -4,6 +4,8 @@ import "./Events.scss";
 import events from "../../utils/events";
 import { Text } from "@mantine/core";
 import EventCard from "../../components/EventCard/EventCard";
+import { motion } from "framer-motion";
+import { textVariant2 } from "../../utils/motion";
 
 const Events = () => {
   const eventList = events;
@@ -18,11 +20,17 @@ const Events = () => {
           <Text className="title">Recent Events</Text>
         </div>
 
-        <div className="eventList">
+        <motion.div
+          className="eventList"
+          variants={textVariant2}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.1 }}
+        >
           {eventList.map((e) => (
-            <EventCard key={e.name} event={e} />
+            <EventCard event={e} key={e.name} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
