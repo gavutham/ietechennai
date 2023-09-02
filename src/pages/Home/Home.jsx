@@ -9,6 +9,14 @@ import EventCard from "../../components/EventCard/EventCard";
 import { Carousel } from "@mantine/carousel";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  slideIn,
+  staggerContainer,
+  textVariant,
+  textVariant2,
+} from "../../utils/motion";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -19,15 +27,37 @@ const Home = () => {
 
   return (
     <div>
-      <ParticlesBackground />
       <div className="home">
-        <div className="landing">
-          <Text className="motto">Learning Today, Leading Tomorrow</Text>
-          <img src="/iete.jpg" height={150} width={150} className="logo" />
-        </div>
-        <div className="quote">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="landing"
+        >
+          <div style={{ position: "absolute" }}>
+            <ParticlesBackground />
+          </div>
+          <motion.span variants={fadeIn("right", "tween", 0.2, 1)}>
+            <Text className="motto">Learning Today, Leading Tomorrow</Text>
+          </motion.span>
+          <motion.img
+            variants={fadeIn("left", "tween", 0.2, 1)}
+            src="/iete.jpg"
+            height={150}
+            width={150}
+            className="logo"
+          />
+        </motion.div>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className="quote"
+        >
           <img src="/modi.png" alt="pm-modi-img" />
-          <div className="quoteContent">
+          <motion.div variants={textVariant(0.2)} className="quoteContent">
             <Text className="quoteText">
               "INNOVATION FOR THE PEOPLE AND BY THE PEOPLE IS THE REACTION OF
               OUR NEW INDIA"
@@ -35,10 +65,16 @@ const Home = () => {
             <Text className="author">
               - NARENDRA MODI, HON’BLE PRIME MINISTER OF INDIA.
             </Text>
-          </div>
-        </div>
-        <div className="about">
-          <div className="contents">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="about"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+        >
+          <motion.div className="contents" variants={textVariant2}>
             <Text className="heading">What we Do?</Text>
             <Text className="desc">
               Chennai Centre of IETE is committed to attain commanding heights
@@ -55,13 +91,13 @@ const Home = () => {
             >
               Know more
             </Button>
-          </div>
+          </motion.div>
           <img
             src="/discussion.jpeg"
             alt="discussion-pic"
             className="picture"
           />
-        </div>
+        </motion.div>
         <div className="events">
           <div className="heading">
             <Text className="title">Recent Events</Text>
