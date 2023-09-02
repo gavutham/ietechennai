@@ -1,0 +1,181 @@
+@import "../../utils/constants.scss";
+
+.chencon {
+  background-color: rgb(226, 228, 243);
+  padding: 75px 50px 50px;
+  display: flex;
+  max-height: max-content;
+  flex-direction: column;
+
+  .mobileImg {
+    display: none;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  .top {
+    display: flex;
+    gap: 50px;
+    align-items: start;
+    justify-content: space-between;
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 3;
+      img {
+        width: 100%;
+        border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
+        animation: floating 3s ease-in-out infinite;
+        box-shadow: $shadow1;
+        -webkit-box-shadow: $shadow1;
+        -moz-box-shadow: $shadow1;
+
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    .left {
+      flex: 5;
+
+      .eventTitle {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 100px;
+      }
+
+      .date {
+        font-size: 20px;
+        font-weight: 700;
+        color: gray;
+        margin-bottom: 32px;
+      }
+
+      .desc {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 20px;
+    max-width: 75%;
+    .note {
+      font-size: 22px;
+      margin-right: 32px;
+      margin-bottom: 36px;
+
+      span {
+        font-weight: 700;
+      }
+
+      Button {
+        margin-left: 16px;
+        background-color: transparent;
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    .top {
+      .left {
+        .eventTitle {
+          margin-bottom: 20px;
+        }
+
+        .mobileImg {
+          margin: auto;
+          margin-bottom: 30px;
+          display: block;
+          width: 80%;
+          height: auto;
+          border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
+          animation: floating 3s ease-in-out infinite;
+          box-shadow: $shadow1;
+          -webkit-box-shadow: $shadow1;
+          -moz-box-shadow: $shadow1;
+        }
+
+        .desc {
+          margin-bottom: 20px;
+          font-size: 20px;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+
+    .bottom {
+      max-width: none;
+
+      .note {
+        margin-right: 0;
+        font-size: 20px;
+
+        span {
+          margin-right: 10px;
+        }
+
+        Button {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+    .top {
+      .left {
+        .eventTitle {
+          margin-bottom: 20px;
+        }
+
+        .mobileImg {
+          margin: auto;
+          margin-bottom: 50px;
+          display: block;
+          width: 70%;
+          height: auto;
+          border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
+          animation: floating 3s ease-in-out infinite;
+          box-shadow: $shadow1;
+          -webkit-box-shadow: $shadow1;
+          -moz-box-shadow: $shadow1;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+
+    .bottom {
+      max-width: none;
+
+      .note {
+        margin-right: 0;
+
+        span {
+          margin-right: 10px;
+        }
+
+        Button {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

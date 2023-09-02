@@ -1,0 +1,68 @@
+@import "../../utils/constants.scss";
+
+.archive {
+  padding: 50px;
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+
+  .desc {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .newsletter {
+    .title {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+  }
+
+  .chencon {
+    display: block;
+    background-color: inherit;
+    padding: 0;
+    margin: none;
+    .title {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+  }
+
+  .list {
+    margin-bottom: 30px;
+
+    .item {
+      font-size: 17px;
+      a {
+        color: inherit;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+          color: $themeBlue;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 30px 20px;
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include tablet {
+    padding: 30px 20px;
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
+}

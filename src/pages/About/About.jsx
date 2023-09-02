@@ -17,6 +17,7 @@ const About = () => {
       <section className="first">
         <div className="">
           <Text className="title">About IETE</Text>
+          <img className="mobileImg" src="/about.jpeg" alt="" />
           {IETE.map((e) => (
             <Text className="desc" key={e}>
               {e}

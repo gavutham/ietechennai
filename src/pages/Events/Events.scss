@@ -1,0 +1,57 @@
+@import "../../utils/constants.scss";
+
+.events {
+  .recentEvents {
+    min-height: calc(100vh - 125px);
+    max-height: max-content;
+    background-color: white;
+    padding: 25px 50px;
+
+    .heading {
+      display: flex;
+      align-items: baseline;
+
+      Button {
+        color: black;
+        background-color: transparent;
+        padding: 0;
+        text-decoration: underline;
+        margin-bottom: 25px;
+        margin-left: 20px;
+      }
+
+      .title {
+        font-size: 36px;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .eventList {
+      max-height: 80%;
+      display: flex;
+      justify-content: space-between;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      padding: 20px;
+
+      .heading {
+        .title {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    @include tablet {
+      padding: 20px;
+      .eventList {
+        justify-content: center;
+      }
+    }
+  }
+}

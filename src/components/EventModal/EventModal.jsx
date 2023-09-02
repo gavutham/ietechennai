@@ -12,7 +12,7 @@ const EventModal = ({ event, date }) => {
       className="eventModal"
     >
       <Card.Section>
-        <Image src={event.img} alt="Norway" />
+        <Image src={event.img} alt="event-banner" />
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">

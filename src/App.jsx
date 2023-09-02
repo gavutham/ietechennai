@@ -5,6 +5,9 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/Not Found/NotFound";
 import Layout from "./components/Layout/Layout";
 import Team from "./pages/Team/Team";
+import Events from "./pages/Events/Events";
+import Chencon from "./pages/Chencon/Chencon";
+import Archive from "./pages/Archive/Archive";
 import Membership from "./pages/Membership/Membership";
 
 const router = createBrowserRouter([
@@ -25,12 +28,24 @@ const router = createBrowserRouter([
         element: <Membership />,
       },
       {
-        path: "/contact",
-        element: <Contact />,
+        path: "/events",
+        element: <Events />,
       },
       {
         path: "/team",
         element: <Team />,
+      },
+      {
+        path: "/chencon",
+        element: <Chencon />,
+      },
+      {
+        path: "/archive",
+        element: <Archive />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
