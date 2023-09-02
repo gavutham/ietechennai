@@ -12,7 +12,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import {
   fadeIn,
-  slideIn,
   staggerContainer,
   textVariant,
   textVariant2,
