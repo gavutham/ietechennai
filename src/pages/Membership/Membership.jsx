@@ -81,17 +81,16 @@ const useStyles = createStyles((theme) => ({
     gap: rem(15),
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
-      gap: rem(3)
+      gap: rem(3),
     },
   },
-
 }));
 
 const Membership = () => {
   const { classes } = useStyles();
 
   return (
-    <>
+    <div className="membership">
       <div className={classes.Container} id="whyJoinUs">
         <div className={classes.content}>
           <Text className={classes.title}>Why Join Us?</Text>
@@ -107,8 +106,8 @@ const Membership = () => {
           </Text>
         </div>
         <img
-          src="/discussion.jpeg"
-          alt="discussion-pic"
+          src="/membership.jpg"
+          alt="membership-pic"
           className={classes.picture}
         />
       </div>
@@ -144,10 +143,10 @@ const Membership = () => {
           <Text className={classes.subtitle}>Application Forms</Text>
           <Grid className={classes.forms} grow>
             {links.map((e) => (
-              <Grid.Col 
-              md={3}
-              lg={1}
-              sm={3}
+              <Grid.Col
+                md={3}
+                lg={1}
+                sm={3}
                 className="formButton"
                 key={e}
                 onClick={() => window.open(e.link, "_blank")}
@@ -158,7 +157,7 @@ const Membership = () => {
           </Grid>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
