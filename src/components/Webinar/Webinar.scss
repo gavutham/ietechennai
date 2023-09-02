@@ -122,4 +122,30 @@
       }
     }
   }
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .top {
+      .left {
+        .mobileImg {
+          margin: auto;
+          margin-bottom: 50px;
+          display: block;
+          width: 70%;
+          height: auto;
+          border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+          animation: floating 3s ease-in-out infinite;
+          box-shadow: $shadow1;
+          -webkit-box-shadow: $shadow1;
+          -moz-box-shadow: $shadow1;
+        }
+      }
+
+      .right {
+        display: none;
+      }
+    }
+  }
 }

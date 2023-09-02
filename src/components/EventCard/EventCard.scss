@@ -32,4 +32,9 @@
 
     width: 100%;
   }
+
+  @include tablet {
+    flex-direction: column;
+    width: 90%;
+  }
 }

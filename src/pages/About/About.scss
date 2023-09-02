@@ -57,6 +57,25 @@
         text-align: center;
       }
     }
+
+    @include tablet {
+      padding: 50px 20px;
+      gap: 0;
+      img {
+        display: none;
+      }
+
+      .mobileImg {
+        display: block;
+        height: auto;
+        max-width: 75%;
+        margin: auto;
+        margin-bottom: 40px;
+        border-radius: 30% 70% 70% 30% / 52% 30% 70% 48%;
+        box-shadow: $shadow1;
+        animation: floating 3s ease-in-out infinite;
+      }
+    }
   }
 
   .second {
@@ -117,6 +136,29 @@
         margin-bottom: 40px;
       }
     }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 0;
+      padding: 50px 20px;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+          margin-bottom: 24px;
+        }
+      }
+      img {
+        max-height: auto;
+        max-width: 75%;
+        object-fit: cover;
+        margin: auto;
+        align-self: center;
+        margin-bottom: 40px;
+      }
+    }
   }
 
   .third {
@@ -127,6 +169,13 @@
 
     @include mobile {
       gap: 30;
+      padding: 50px 20px;
+      flex-direction: column;
+    }
+
+    @include tablet {
+      gap: 30;
+      align-items: center;
       padding: 50px 20px;
       flex-direction: column;
     }
@@ -182,6 +231,20 @@
         }
       }
     }
+
+    @include tablet {
+      div {
+        .wrapper {
+          .title {
+            font-size: 22px;
+          }
+
+          .count {
+            font-size: 32px;
+          }
+        }
+      }
+    }
   }
 
   .fifth {
@@ -233,29 +296,16 @@
         }
       }
     }
-  }
-}
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, 15px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
-}
+    @include tablet {
+      padding: 50px 20px;
 
-@keyframes inout {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0px);
+      .list {
+        .items {
+          min-width: none;
+          width: 100%;
+        }
+      }
+    }
   }
 }
