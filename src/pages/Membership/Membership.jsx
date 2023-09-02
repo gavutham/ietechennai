@@ -2,8 +2,9 @@ import { Button, createStyles, Text, rem, Grid } from "@mantine/core";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { members, links } from "../../utils/membership";
 import MembershipCard from "../../components/MembershipCard/MembershipCard";
-
+import { motion } from "framer-motion";
 import "./Membership.scss";
+import { textVariant, textVariant2 } from "../../utils/motion";
 
 const useStyles = createStyles((theme) => ({
   Container: {
@@ -91,7 +92,14 @@ const Membership = () => {
 
   return (
     <div className="membership">
-      <div className={classes.Container} id="whyJoinUs">
+      <motion.div
+        className={classes.Container}
+        id="whyJoinUs"
+        variants={textVariant(0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <div className={classes.content}>
           <Text className={classes.title}>Why Join Us?</Text>
           <Text className={classes.description}>
@@ -110,8 +118,15 @@ const Membership = () => {
           alt="membership-pic"
           className={classes.picture}
         />
-      </div>
-      <div className={classes.Container} id="membership">
+      </motion.div>
+      <motion.div
+        className={classes.Container}
+        id="membership"
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <Text className={classes.title} id="membershipTitle">
           MEMBERSHIP
         </Text>
@@ -137,7 +152,7 @@ const Membership = () => {
         >
           Click to know about Eligibility Criteria and More
         </Button>
-      </div>
+      </motion.div>
       <div className="formContainer">
         <div className={classes.formContainer}>
           <Text className={classes.subtitle}>Application Forms</Text>
