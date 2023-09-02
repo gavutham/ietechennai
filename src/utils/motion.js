@@ -14,7 +14,7 @@ export const headerVariants = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
+      delay: 0,
     },
   },
 };
@@ -129,7 +129,7 @@ export const footerVariants = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 0.5,
+      delay: 0,
     },
   },
 };
@@ -142,10 +142,4 @@ export const staggerChildren = {
       staggerChildren: 0.5,
     },
   },
-};
-
-export const getMenuStyles = (menuOpened) => {
-  if (document.documentElement.clientWidth <= 640) {
-    return { right: !menuOpened && "-100%" };
-  }
 };

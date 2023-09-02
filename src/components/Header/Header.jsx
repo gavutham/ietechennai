@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import navbarItems from "../../utils/navbarItems";
 import "./Header.scss";
+import { motion } from "framer-motion";
+import { headerVariants } from "../../utils/motion";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -130,35 +132,35 @@ const Header = () => {
   ));
 
   return (
-    <>
-      <MHeader height={75} className={`${classes.header} header`}>
-        <div className={classes.wrapper}>
-          <Text className="logo">IETE</Text>
-          <Group spacing={15} className={classes.links}>
-            {items}
-          </Group>
+    <MHeader height={75} className={`${classes.header} header`}>
+      <motion.div
+        className={classes.wrapper}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        variants={headerVariants}
+      >
+        <Text className="logo">IETE</Text>
+        <Group spacing={15} className={classes.links}>
+          {items}
+        </Group>
 
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-          />
+        <Burger
+          opened={opened}
+          onClick={toggle}
+          className={classes.burger}
+          size="sm"
+        />
 
-          <Transition
-            transition="pop-top-right"
-            duration={200}
-            mounted={opened}
-          >
-            {(styles) => (
-              <Paper className={classes.dropdown} withBorder style={styles}>
-                {items}
-              </Paper>
-            )}
-          </Transition>
-        </div>
-      </MHeader>
-    </>
+        <Transition transition="pop-top-right" duration={200} mounted={opened}>
+          {(styles) => (
+            <Paper className={classes.dropdown} withBorder style={styles}>
+              {items}
+            </Paper>
+          )}
+        </Transition>
+      </motion.div>
+    </MHeader>
   );
 };
 

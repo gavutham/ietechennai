@@ -14,6 +14,8 @@ import footerGroups from "../../utils/footerGroups";
 import footerUsefulLinksItems from "../../utils/footerUsefulLinksItems";
 import { useNavigate } from "react-router-dom";
 import "./Footer.scss";
+import { motion } from "framer-motion";
+import { footerVariants } from "../../utils/motion";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -182,7 +184,13 @@ const Footer = () => {
 
   return (
     <>
-      <footer className={`footer ${classes.footer}`}>
+      <motion.footer
+        className={`footer ${classes.footer}`}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.00000000000000000001 }}
+        variants={footerVariants}
+      >
         <div className={classes.inner}>
           <div className={classes.logo}>
             <Text className={classes.title} id="title">
@@ -259,7 +267,7 @@ const Footer = () => {
             </ActionIcon>
           </Group>
         </div>
-      </footer>
+      </motion.footer>
     </>
   );
 };
