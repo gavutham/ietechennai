@@ -2,6 +2,8 @@
 import { Card, Group, Text } from "@mantine/core";
 import "./MemberCard.scss";
 import { GoMail } from "react-icons/go";
+import { motion } from "framer-motion";
+import { textVariant2 } from "../../utils/motion";
 
 const MemberCard = ({ member }) => {
   const mailTo = (email) => {
@@ -16,7 +18,15 @@ const MemberCard = ({ member }) => {
       withBorder
       className="memberCard"
     >
-      <img className="image" src={member.img} alt="profile-img" />
+      <motion.img
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="image"
+        src={member.img}
+        alt="profile-img"
+      />
 
       <Group position="apart" mt="md" mb="xs">
         <Text size="lg" weight={400}>
