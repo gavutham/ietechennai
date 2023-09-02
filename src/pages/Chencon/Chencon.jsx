@@ -3,13 +3,21 @@ import "./Chencon.scss";
 import { BsBoxArrowInUpRight, BsTelephone } from "react-icons/bs";
 import { TbDeviceLandlinePhone, TbWorldWww } from "react-icons/tb";
 import { AiOutlineMail } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant, textVariant2 } from "../../utils/motion";
 
 const Chencon = () => {
   return (
     <div className="chenconPage">
       <section className="lander">
         <div className="top">
-          <div className="left">
+          <motion.div
+            className="left"
+            variants={textVariant(0)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+          >
             <Text className="title">IETE CHENCON 2022 - Call for Papers</Text>
             <Text className="date">Hybrid Mode- MAY 20 & 21, 2022</Text>
 
@@ -22,7 +30,7 @@ const Chencon = () => {
               International Conference on Power of Artificial Intelligence and
               Machine Learning for Human Empowerment
             </Text>
-          </div>
+          </motion.div>
           <div className="right">
             <img src="/chencon/chencon22.jpeg" alt="chencon-img" />
           </div>
@@ -58,7 +66,13 @@ const Chencon = () => {
           </Button>
         </div>
       </section>
-      <section className="second">
+      <motion.section
+        className="second"
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <Text className="title">Scope of the Conference</Text>
         <Text className="desc">
           Recently, the use of AI/ML technology has been exponentially
@@ -74,9 +88,15 @@ const Chencon = () => {
           areas of AI and ML applications but not limited to:
         </Text>
         <img src="/chencon/chencon22list.jpeg" alt="topics-list" />
-      </section>
+      </motion.section>
 
-      <section className="third">
+      <motion.section
+        className="third"
+        variants={textVariant(0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <Text className="title">Submission Guidelines</Text>
         <Text className="desc">
           Prospective authors are invited to submit full papers describing
@@ -102,9 +122,15 @@ const Chencon = () => {
           Selected and presented papers will be published in the Journal of
           Science and Technology (ISSN 2456–5660)
         </Text>
-      </section>
+      </motion.section>
 
-      <section className="fourth">
+      <motion.section
+        className="fourth"
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <div className="container">
           <div className="title">Registration & Fee Details</div>
           <div className="desc">
@@ -148,9 +174,15 @@ const Chencon = () => {
             </Text>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="fifth">
+      <motion.section
+        className="fifth"
+        variants={fadeIn("left", "tween", 0.2, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
         <Text className="title">Event Organizers</Text>
         <div className="cheif">
           <div>
@@ -184,7 +216,7 @@ const Chencon = () => {
             <Text className="name">Dr. Tata Sudhakar</Text>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <section className="contact">
         <Text className="title">Having Further Queries? Contact us on</Text>
