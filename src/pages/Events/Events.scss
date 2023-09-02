@@ -46,5 +46,12 @@
         }
       }
     }
+
+    @include tablet {
+      padding: 20px;
+      .eventList {
+        justify-content: center;
+      }
+    }
   }
 }

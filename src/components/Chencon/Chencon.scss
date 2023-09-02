@@ -100,7 +100,7 @@
           display: block;
           width: 80%;
           height: auto;
-          border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+          border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
           animation: floating 3s ease-in-out infinite;
           box-shadow: $shadow1;
           -webkit-box-shadow: $shadow1;
@@ -123,6 +123,50 @@
       .note {
         margin-right: 0;
         font-size: 20px;
+
+        span {
+          margin-right: 10px;
+        }
+
+        Button {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+    .top {
+      .left {
+        .eventTitle {
+          margin-bottom: 20px;
+        }
+
+        .mobileImg {
+          margin: auto;
+          margin-bottom: 50px;
+          display: block;
+          width: 70%;
+          height: auto;
+          border-radius: 30% 70% 33% 67% / 32% 22% 78% 68%;
+          animation: floating 3s ease-in-out infinite;
+          box-shadow: $shadow1;
+          -webkit-box-shadow: $shadow1;
+          -moz-box-shadow: $shadow1;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+
+    .bottom {
+      max-width: none;
+
+      .note {
+        margin-right: 0;
 
         span {
           margin-right: 10px;
