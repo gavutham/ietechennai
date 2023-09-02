@@ -57,4 +57,12 @@
       margin-bottom: 30px;
     }
   }
+
+  @include tablet {
+    padding: 30px 20px;
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
 }
