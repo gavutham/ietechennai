@@ -43,4 +43,18 @@
       cursor: pointer;
     }
   }
+
+  @include mobile {
+    #whyJoinUs {
+      align-items: start;
+      padding-top: 30px;
+    }
+  }
+
+  @include tablet {
+    #whyJoinUs {
+      align-items: start;
+      // padding-top: 30px;
+    }
+  }
 }

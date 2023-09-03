@@ -121,7 +121,6 @@ const useStyles = createStyles((theme) => ({
       flexDirection: "column",
       gap: rem(35),
       marginTop: `50px`,
-      
     },
   },
 

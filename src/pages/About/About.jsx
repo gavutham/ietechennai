@@ -22,13 +22,7 @@ import {
 const About = () => {
   return (
     <div className="about">
-      <motion.section
-        className="first"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-      >
+      <section className="first">
         <motion.div className="" variants={textVariant(0.1)}>
           <Text className="title">About IETE</Text>
           <motion.img
@@ -50,7 +44,7 @@ const About = () => {
             variants={fadeIn("left", "tween", 0.2, 1)}
           />
         </div>
-      </motion.section>
+      </section>
       <motion.section
         className="second"
         variants={staggerContainer}
@@ -72,7 +66,7 @@ const About = () => {
       </motion.section>
       <motion.section
         className="third"
-        variants={fadeIn("right", "tween", 0.1, 0.5)}
+        variants={fadeIn("right", "tween", 0.1, 1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
