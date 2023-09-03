@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
     [theme.fn.smallerThan("md")]: {
-      paddingTop: `68px`
+      paddingTop: `68px`,
     },
     [theme.fn.smallerThan("sm")]: {
       padding: `calc(${theme.spacing.xl} * 2) 8%`,
@@ -121,7 +121,7 @@ const useStyles = createStyles((theme) => ({
       display: "block",
     },
     [theme.fn.smallerThan("sm")]: {
-      display: "none"
+      display: "none",
     },
   },
 
@@ -130,7 +130,7 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
     [theme.fn.smallerThan("sm")]: {
-      display: "block"
+      display: "block",
     },
   },
 
@@ -235,17 +235,17 @@ const Footer = () => {
               <span onClick={openEmail}>Email: ietechennai@gmail.com</span>
             </Text>
             <div className={classes.tabletAddress}>
-            <Text className={classes.title}>Address</Text>
-            <Text size="sm" color="dimmed" className={classes.description}>
-              IETE Chennai centre,
-              <br />
-              No: 37, Tamil Nadu 600086
-              <br />
-              Conran Smith Road Entrance Peters Road,
-              <br />
-              Gopalapuram,Chennai
-            </Text>
-          </div>
+              <Text className={classes.title}>Address</Text>
+              <Text size="sm" color="dimmed" className={classes.description}>
+                IETE Chennai centre,
+                <br />
+                No: 37, Tamil Nadu 600086
+                <br />
+                Conran Smith Road Entrance Peters Road,
+                <br />
+                Gopalapuram,Chennai
+              </Text>
+            </div>
           </div>
           <div className={classes.address}>
             <Text className={classes.title}>Address</Text>
@@ -304,7 +304,16 @@ const Footer = () => {
               />
             </ActionIcon>
             <ActionIcon size="lg">
-              <BiLogoLinkedin size="1.05rem" stroke={1.5} />
+              <BiLogoLinkedin
+                size="1.05rem"
+                stroke={1.5}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/iete-chennai",
+                    "_blank"
+                  )
+                }
+              />
             </ActionIcon>
           </Group>
         </div>
