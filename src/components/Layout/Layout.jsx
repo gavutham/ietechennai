@@ -14,13 +14,19 @@ const Layout = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <div style={{ overflowY: "hidden" }}>
+    <>
       <Header />
-      <div ref={wrapperRef}>
-        {imagesLoaded ? <Outlet style={{ overflowY: "hidden" }} /> : <Loader />}
+      <div style={{ overflowY: "hidden" }}>
+        <div ref={wrapperRef}>
+          {imagesLoaded ? (
+            <Outlet style={{ overflowY: "hidden" }} />
+          ) : (
+            <Loader />
+          )}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
