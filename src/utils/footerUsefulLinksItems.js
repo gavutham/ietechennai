@@ -1,29 +1,28 @@
 const footerUsefulLinksItems = [
-    {
-      link: "/",
-      label: "Home",
-    },
-    {
-      link: "/about",
-      label: "About",
-    },
-    {
-      link: "/contact",
-      label: "Contact",
-    },
-    {
-      link: "/comittee",
-      label: "Comittee",
-    },
-    {
-      link: "/",
-      label: "Events",
-    },
-    {
-      link: "/",
-      label: "Membership",
-    },
-  ];
-  
-  export default footerUsefulLinksItems;
-  
+  {
+    link: "/about",
+    label: "About",
+  },
+  {
+    link: "/contact",
+    label: "Contact",
+  },
+  {
+    link: "/events",
+    label: "Events",
+  },
+  {
+    link: "/chencon",
+    label: "Chencon",
+  },
+  {
+    link: "/archive",
+    label: "Archive",
+  },
+  {
+    link: "/membership",
+    label: "Membership",
+  },
+];
+
+export default footerUsefulLinksItems;
