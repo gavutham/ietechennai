@@ -22,7 +22,7 @@ const Home = () => {
 
   events.sort((a, b) => b.date.getTime() - a.date.getTime());
   const reqEvents = events.slice(0, 4);
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   return (
     <div>
